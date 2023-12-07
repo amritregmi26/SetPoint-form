@@ -1,0 +1,75 @@
+/* Main section of sidebar */
+.sidebar {
+    width: 25rem;
+    background-color: var(--dark-blue);
+    border-radius: 0 1rem 1rem 0;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+/* Inner container of sidebar */
+.container {
+    padding: 2.5rem 2rem 3rem 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0.8rem;
+}
+
+/* Sidebar title */
+.container .title {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+/* Sidebar title's first span child */
+.container .title>span:first-child {
+    color: var(--light-green);
+}
+
+/* Sidebar title's last span child */
+.container .title>span:last-child {
+    color: var(--cyan);
+}
+
+/* Sidebar subtitle */
+.container .subtitle {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    color: var(--white);
+    letter-spacing: 0.055rem;
+    line-height: 1.35rem;
+}
+
+@media screen and (max-width: 767px) {
+
+    /* Main section of sidebar */
+    .sidebar {
+        width: 100%;
+        height: auto;
+        border-radius: 0;
+    }
+
+    /* Inner container of sidebar */
+    .container {
+        padding: 1.5rem 1rem 2rem 2rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Sidebar title */
+    .container .title {
+        font-size: 2rem;
+    }
+
+    /* Sidebar subtitle */
+    .container .subtitle {
+        font-size: 0.75rem;
+        text-align: center;
+    }
+}

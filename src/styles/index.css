@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;700;900&display=swap');
+
+:root
+{
+    --dark-blue: #2F4858;
+    --sidebar-text: #E1F1FF;
+    --light-green: #5CF18F;
+    --cyan: #2BEFEF;
+    --white: #FFFFFF;
+}
