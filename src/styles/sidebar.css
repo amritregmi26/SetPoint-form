@@ -1,12 +1,9 @@
 /* Main section of sidebar */
 .sidebar {
-    width: 25rem;
+    width: 35%;
     background-color: var(--dark-blue);
     border-radius: 0 1rem 1rem 0;
     height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
 }
 
 /* Inner container of sidebar */
@@ -44,6 +41,21 @@
     color: var(--white);
     letter-spacing: 0.055rem;
     line-height: 1.35rem;
+}
+
+@media screen and (max-width: 1136px) {
+
+    /* Sidebar title */
+    .container .title {
+        font-size: 2.5rem;
+    }
+
+    /* Sidebar subtitle */
+.container .subtitle {
+    font-size: 0.9rem;
+    line-height: 0.95rem;
+}
+
 }
 
 @media screen and (max-width: 767px) {

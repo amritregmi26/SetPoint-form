@@ -1,8 +1,33 @@
 *,
-*::after, 
-*::before
-{
+*::after,
+*::before {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+.App {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.right-section {
+    width: 65%;
+    height: auto;
+    padding-left: 3.5rem;
+}
+
+@media screen and (max-width: 767px) {
+
+    .App {
+        flex-direction: column;
+    }
+
+    .right-section {
+        width: 100%;
+        height: auto;
+        padding: 2rem;
+    }
 }
