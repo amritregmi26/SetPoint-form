@@ -51,10 +51,10 @@
     }
 
     /* Sidebar subtitle */
-.container .subtitle {
-    font-size: 0.9rem;
-    line-height: 0.95rem;
-}
+    .container .subtitle {
+        font-size: 0.9rem;
+        line-height: 0.95rem;
+    }
 
 }
 
