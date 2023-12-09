@@ -3,7 +3,7 @@ form {
     margin-top: 3rem;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 3.5rem;
     position: relative;
     width: 100%;
 }
@@ -13,35 +13,77 @@ form>.row {
     flex-direction: row;
     gap: 2rem;
     align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 form>.row>* {
-    width: 22rem;
-
+    width: 50%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 1.1rem;
 }
 
-select {
+select, input {
     padding: 0.5rem 1rem;
     outline: none;
     border-radius: 0.5rem;
     border: 0.1rem solid var(--silver);
-    background: url("data:image/svg+xml,<svg height='10px' width='10px' viewBox='0 0 16 16' fill='%23000000' xmlns='http://www.w3.org/2000/svg'><path d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/></svg>") no-repeat;
+    background: url("data:image/svg+xml,<svg height='15px' width='15px' viewBox='0 0 16 16' fill='%23000000' xmlns='http://www.w3.org/2000/svg'><path d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/></svg>") no-repeat;
     background-position: calc(100% - 0.75rem) center !important;
     -moz-appearance: none !important;
     -webkit-appearance: none !important;
     appearance: none !important;
     font-size: 1.15rem;
     color: var(--light-gray);
+    cursor: pointer;
+}
+
+input {
+    background: none;
+}
+
+@media screen and (max-width: 991px) {
+    form {
+        margin-top: 2rem;
+        gap: 2rem;
+    }
+
+    .row {
+        flex-wrap: wrap;
+    }
+
+    form>.row>* {
+        font-size: 1rem;
+        width: 90%;
+    }
 }
 
 /* Your Location form styling*/
-#your-location .row-1 select:first-child {
+#your-location .row:first-child select:first-child {
     background: var(--silver);
     opacity: 0.55;
     color: var(--light-gray);
     cursor: not-allowed;
+}
 
+form>.row.yl-btn-holder {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+form>.row.yl-btn-holder>* {
+    width: auto;
+}
+
+@media screen and (max-width:495px) {
+
+    form>.row.yl-btn-holder {
+        justify-content: center;
+    }
+
+    form>.row.yl-btn-holder>* {
+        width: 90%;
+    }
 }
 
