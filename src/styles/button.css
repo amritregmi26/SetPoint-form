@@ -17,3 +17,17 @@
         font-size: 1rem;
     }
 }
+
+@media screen and (max-width:495px)
+{
+    button:first-child :not(:only-child) {
+        background: none;
+        color: var(--dark-blue);
+        transition: 0.35s all;
+    }
+
+    button:first-child :not(:only-child):hover {
+        background: var(--dark-blue);
+        color: var(--white);
+    }
+}

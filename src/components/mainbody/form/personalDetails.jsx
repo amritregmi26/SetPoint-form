@@ -16,11 +16,11 @@ export const PersonalDetails = () => {
 
           <div className="row">
             <input type="date" name="dob" placeholder="Date of Birth" />
-            <div className="gender">
+            <div className="select-items">
               <span>Gender: </span>
-              <span><input type="radio" name="gender" className="gender-selection" /> Male</span>
-              <span><input type="radio" name="gender" className="gender-selection" /> Female</span>
-              <span><input type="radio" name="gender" className="gender-selection" /> Other </span>
+              <span><input type="radio" name="gender" className="selection" /> Male</span>
+              <span><input type="radio" name="gender" className="selection" /> Female</span>
+              <span><input type="radio" name="gender" className="selection" /> Other </span>
             </div>
           </div>
 

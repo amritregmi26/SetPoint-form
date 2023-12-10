@@ -12,7 +12,7 @@ form>.row {
     display: flex;
     flex-direction: row;
     gap: 2rem;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-around;
 }
 
@@ -41,6 +41,7 @@ input:not([type="checkbox"]):not([type="radio"]) {
 
 input:not([type="checkbox"]):not([type="radio"]) {
     background: none;
+    cursor: text;
 }
 
 form>.row.btn-holder {
@@ -63,17 +64,6 @@ form>.row.btn-holder.btn-group {
     form>.row.btn-holder,
     form>.row.btn-holder.btn-group {
         justify-content: center;
-    }
-
-    form>.row.btn-holder.btn-group button:first-child {
-        background: none;
-        color: var(--dark-blue);
-        transition: 0.35s all;
-    }
-
-    form>.row.btn-holder.btn-group button:first-child:hover {
-        background: var(--dark-blue);
-        color: var(--white);
     }
 
     form>.row.btn-holder>* {
@@ -107,7 +97,7 @@ form>.row.btn-holder.btn-group {
 }
 
 /* Personal Details form styling */
-.gender {
+.select-items {
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -116,7 +106,7 @@ form>.row.btn-holder.btn-group {
     gap: 0.8rem;
 }
 
-.gender> :not(span:first-child) {
+.select-items> :not(span:first-child) {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -124,31 +114,65 @@ form>.row.btn-holder.btn-group {
 }
 
 
-.gender .gender-selection {
+.select-items .selection {
     -ms-transform: scale(1.5);
     -webkit-transform: scale(1.5);
     transform: scale(1.5);
 }
 
 @media screen and (max-width: 767px) {
-    .gender {
+    .select-items {
         align-items: center;
         justify-content: flex-start;
     }
 }
 
 @media screen and (max-width: 400px) {
-    .gender {
+    .select-items {
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
     }
 
-    .gender> :not(span:first-child) {
+    .select-items> :not(span:first-child) {
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 0.75rem;
         padding-left: 2rem;
+    }
+}
+
+/* Family Background Form Styling */
+#family-bg > form {
+    gap: 2rem;
+}
+
+.select-items.family-background {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+.select-items.family-background .occupation-items {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.select-items.family-background .occupation-items span {
+    display: flex;
+    gap: 1.5rem;
+}
+
+@media screen and (max-width: 400px) {
+    .select-items.family-background {
+        flex-direction: column;
+        gap: 0;
+    }
+    .select-items.family-background .occupation-items {
+        padding: 1.3rem;
     }
 }
