@@ -15,7 +15,8 @@
 
 .right-section {
     width: 65%;
-    height: auto;
+    height: 100vh;
+    overflow: scroll;
     padding: 0 4.5rem;
     position: relative;
 }
@@ -30,5 +31,50 @@
         width: 100%;
         height: auto;
         padding: 2rem;
+    }
+}
+
+/* Next and Previous buttons CSS */
+
+.btn-holder {
+    margin-top: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.btn-holder>* {
+    width: auto;
+}
+
+.btn-holder {
+    justify-content: space-between;
+}
+
+@media screen and (max-width:495px)
+{
+    .prev-btn {
+        background: none;
+        color: var(--dark-blue);
+        transition: 0.35s all;
+    }
+
+    .prev-btn:hover {
+        background: var(--dark-blue);
+        color: var(--white);
+    }
+}
+
+@media screen and (max-width:495px) {
+
+    .btn-holder {
+        margin-top: 1.5rem;
+        justify-content: center;
+        flex-direction: column;
+        gap: 1.2rem
+    }
+
+    .btn-holder>* {
+        width: 90%;
     }
 }

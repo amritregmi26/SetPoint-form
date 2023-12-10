@@ -1,14 +1,20 @@
-import React from 'react';
-import { Button, Header } from '../common';
+import React, { useState } from 'react';
 import '../../../styles/form.css';
 
 export const PersonalDetails = () => {
+
+  const [numberInput, setNumberInput] = useState("");
+
+
+  const handleNumericInput = (e) => {
+    // Allow only numeric input
+    setNumberInput(e.target.value.replace(/[^0-9]/g, ''));
+  }
+
   return (
     <>
-      <Header text="Appointment Form" />
-
       <section id="personal-details">
-        <form>
+        <form method='POST'>
           <div className="row">
             <input type="text" name="firstName" placeholder="First Name" />
             <input type="text" name="lastName" placeholder="Last Name" />
@@ -26,13 +32,9 @@ export const PersonalDetails = () => {
 
           <div className="row">
             <input type="email" name="email" placeholder="Email" />
-            <input type="text" pattern="[0-9]{10}" name="phone" placeholder="Phone Number" />
+            <input type="text" pattern="[0-9]{10}" name="phone" placeholder="Phone Number" value={numberInput} onChange={handleNumericInput} />
           </div>
 
-          <div className="row btn-holder btn-group">
-            <Button value="Previous" onClick={(e) => e.preventDefault()} />
-            <Button value="Next" onClick={(e) => e.preventDefault()} />
-          </div>
         </form>
       </section>
     </>

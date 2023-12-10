@@ -44,34 +44,6 @@ input:not([type="checkbox"]):not([type="radio"]) {
     cursor: text;
 }
 
-form>.row.btn-holder {
-    /* Both classes are used in order to increase specificity */
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-}
-
-form>.row.btn-holder>* {
-    width: auto;
-}
-
-form>.row.btn-holder.btn-group {
-    justify-content: space-between;
-}
-
-@media screen and (max-width:495px) {
-
-    form>.row.btn-holder,
-    form>.row.btn-holder.btn-group {
-        justify-content: center;
-    }
-
-    form>.row.btn-holder>* {
-        width: 90%;
-    }
-}
-
-
 @media screen and (max-width: 991px) {
     form {
         margin-top: 2rem;

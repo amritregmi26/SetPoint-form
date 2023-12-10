@@ -9,6 +9,11 @@
     outline: none;
     border: 0.1rem solid var(--dark-blue);
     cursor: pointer;
+    transition: 0.2s all;
+}
+
+.btn:hover {
+    background: var(--btn-hover);
 }
 
 @media screen and (max-width:991px) {
@@ -20,14 +25,15 @@
 
 @media screen and (max-width:495px)
 {
-    button:first-child :not(:only-child) {
+    .prev-btn {
         background: none;
         color: var(--dark-blue);
         transition: 0.35s all;
     }
 
-    button:first-child :not(:only-child):hover {
+    .prev-btn:hover {
         background: var(--dark-blue);
         color: var(--white);
     }
 }
+

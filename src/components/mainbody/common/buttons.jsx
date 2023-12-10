@@ -1,8 +1,8 @@
 import React from 'react'
 import '../../../styles/button.css'
 
-export const Button = ({value, onClick}) => {
+export const Button = ({value, onClick, className}) => {
   return (
-    <button className="btn" type='submit' onClick={onClick}>{value}</button>
+    <button className={`btn ${className}`} type='submit' onClick={onClick}>{value}</button>
   )
 }
