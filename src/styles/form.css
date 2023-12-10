@@ -23,7 +23,8 @@ form>.row>* {
     font-size: 1.1rem;
 }
 
-select, input {
+select,
+input:not([type="checkbox"]):not([type="radio"]) {
     padding: 0.5rem 1rem;
     outline: none;
     border-radius: 0.5rem;
@@ -38,9 +39,48 @@ select, input {
     cursor: pointer;
 }
 
-input {
+input:not([type="checkbox"]):not([type="radio"]) {
     background: none;
 }
+
+form>.row.btn-holder {
+    /* Both classes are used in order to increase specificity */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+form>.row.btn-holder>* {
+    width: auto;
+}
+
+form>.row.btn-holder.btn-group {
+    justify-content: space-between;
+}
+
+@media screen and (max-width:495px) {
+
+    form>.row.btn-holder,
+    form>.row.btn-holder.btn-group {
+        justify-content: center;
+    }
+
+    form>.row.btn-holder.btn-group button:first-child {
+        background: none;
+        color: var(--dark-blue);
+        transition: 0.35s all;
+    }
+
+    form>.row.btn-holder.btn-group button:first-child:hover {
+        background: var(--dark-blue);
+        color: var(--white);
+    }
+
+    form>.row.btn-holder>* {
+        width: 90%;
+    }
+}
+
 
 @media screen and (max-width: 991px) {
     form {
@@ -66,24 +106,49 @@ input {
     cursor: not-allowed;
 }
 
-form>.row.yl-btn-holder {
+/* Personal Details form styling */
+.gender {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.8rem;
+}
+
+.gender> :not(span:first-child) {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
+    gap: 0.75rem
 }
 
-form>.row.yl-btn-holder>* {
-    width: auto;
+
+.gender .gender-selection {
+    -ms-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
 }
 
-@media screen and (max-width:495px) {
+@media screen and (max-width: 767px) {
+    .gender {
+        align-items: center;
+        justify-content: flex-start;
+    }
+}
 
-    form>.row.yl-btn-holder {
+@media screen and (max-width: 400px) {
+    .gender {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .gender> :not(span:first-child) {
+        display: flex;
+        align-items: center;
         justify-content: center;
-    }
-
-    form>.row.yl-btn-holder>* {
-        width: 90%;
+        gap: 0.75rem;
+        padding-left: 2rem;
     }
 }
-

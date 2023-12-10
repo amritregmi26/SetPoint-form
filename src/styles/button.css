@@ -10,3 +10,10 @@
     border: 0.1rem solid var(--dark-blue);
     cursor: pointer;
 }
+
+@media screen and (max-width:991px) {
+    .btn {
+        padding: 0.8rem 3.45rem;
+        font-size: 1rem;
+    }
+}

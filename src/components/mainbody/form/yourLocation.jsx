@@ -10,8 +10,7 @@ export const YourLocation = () => {
         <>
             <Header text="Appointment Form" />
             <section id="your-location">
-                <form className='location-form'>
-
+                <form>
                     <div className="row">
                         <select name='country' disabled>
                             <option value="Nepal">Nepal</option>
@@ -19,7 +18,7 @@ export const YourLocation = () => {
 
                         <select name='province' id='province'>
                             <option value="chooseYourProvince"> Choose Your Province </option>
-                            { provinceList.map(province => (
+                            {provinceList.map(province => (
                                 <option key={province} value={province}> {province} </option>
                             ))
                             }
@@ -40,9 +39,9 @@ export const YourLocation = () => {
                         <input type="date" name="date" id="date" />
                         <p> Date in BS: 2080/08/21 </p>
                     </div>
-                    
-                    <div className='row yl-btn-holder'>
-                        <Button value="Next" onClick={(e) => e.preventDefault()}/>
+
+                    <div className='row btn-holder'>
+                        <Button value="Next" onClick={(e) => e.preventDefault()} />
                     </div>
                 </form>
             </section>

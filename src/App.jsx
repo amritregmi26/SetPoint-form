@@ -1,7 +1,7 @@
 import React from 'react'
 import './styles/App.css'
 import Sidebar from './components/sidebar/sidebar'
-import { YourLocation } from './components/mainbody/form'
+import { PersonalDetails, YourLocation } from './components/mainbody/form'
 
 const App = () => {
 
@@ -11,7 +11,7 @@ const App = () => {
       <Sidebar />
 
       <div className="right-section">
-        <YourLocation />
+        <PersonalDetails />
       </div>
 
     </div>
