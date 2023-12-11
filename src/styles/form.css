@@ -23,6 +23,12 @@ form>.row>* {
     font-size: 1.1rem;
 }
 
+/* Used this approach to increase specificity of input type */
+input:not([type="checkbox"]):not([type="radio"]).field-error,
+.field-error {
+    border: 0.1rem solid var(--red);
+}
+
 select,
 input:not([type="checkbox"]):not([type="radio"]) {
     padding: 0.5rem 1rem;
@@ -116,7 +122,7 @@ input:not([type="checkbox"]):not([type="radio"]) {
 }
 
 /* Family Background Form Styling */
-#family-bg > form {
+#family-bg>form {
     gap: 2rem;
 }
 
@@ -144,7 +150,41 @@ input:not([type="checkbox"]):not([type="radio"]) {
         flex-direction: column;
         gap: 0;
     }
+
     .select-items.family-background .occupation-items {
         padding: 1.3rem;
+    }
+}
+
+/* Review Details Styling */
+#review .row {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-family: 'Roboto', sans-serif;
+}
+
+#review .row .col {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.3rem;
+}
+
+#review .row h2 {
+    text-decoration: underline;
+}
+
+#review .row .col span {
+    font-weight: 700;
+}
+
+@media screen and (max-width: 991px) {
+    #review .row {
+        flex-direction: column;
     }
 }

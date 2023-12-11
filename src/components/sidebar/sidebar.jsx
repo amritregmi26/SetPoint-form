@@ -1,5 +1,6 @@
 import React from 'react'
 import '../../styles/sidebar.css'
+import Progress from './progress'
 
 const Sidebar = () => {
     return (
@@ -10,6 +11,8 @@ const Sidebar = () => {
                     <span>Point</span>
                 </h2>
                 <p className="subtitle">Schedule appointments with individuals in your vicinity at your convenience</p>
+                
+                <Progress />
             </div>
         </section>
     )

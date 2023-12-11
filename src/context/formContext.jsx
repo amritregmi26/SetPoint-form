@@ -1,22 +1,48 @@
-import React, { createContext, useReducer } from 'react'
+import React, { createContext, useContext, useReducer } from 'react'
 import { formReducer } from '../reducer/formReducer';
-import useStep from '../hooks/useStep';
 
 const initialState = {
-    step: 0, 
-    formData: {}
+    step: 0,
+    formData: {
+        firstName: "",
+        lastName: "",
+        province: "Choose your province",
+        district: "Choose your district",
+        city: "Choose your city",
+        dateAD: "",
+        dob: "",
+        gender: "",
+        email: "",
+        phone: "",
+        fatherName: "",
+        motherName: "",
+        grandfatherName: "",
+        fatherOcc: "",
+        motherOcc: "",
+        familyIncome: "Family income per year"
+    }
 }
 
 const FormContext = createContext(initialState);
 
-const FormProvider = ({children}) => {
+// Provider Function implementation
+const FormProvider = ({ children }) => {
 
     const [state, dispatch] = useReducer(formReducer, initialState)
 
-    return <FormContext.Provider >
+    const value = {
+        dispatch,
+        state, 
+    }
+
+    return <FormContext.Provider value={value}>
         {children}
     </FormContext.Provider>
-}  
+}
 
+// Custom hook for accessing context
+const useForm = () => {
+    return useContext(FormContext);
+}
 
-export { FormProvider }
+export { FormProvider, useForm }
